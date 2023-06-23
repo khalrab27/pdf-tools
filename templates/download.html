@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='stylesheet.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <title>Download | PDF Tools</title>
+  </head>
+
+  <body>
+    <h1>Download Files</h1>
+
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+
+    <ul class="download-list">
+      {% for file in files %}
+      <li>
+        <a
+          href="{{ url_for('download_file', filename=file) }}"
+          class="download-link"
+          >{{ file }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+
+    <br />
+    <br />
+    <a href="{{ url_for('index') }}">Back to homepage</a>
+  </body>
+</html>

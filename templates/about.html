@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='stylesheet.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <title>About | PDF Tools</title>
+  </head>
+
+  <body>
+    <h1 class="about-page" style="margin-top: 40px">About PDF Tools</h1>
+
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+
+    <p class="about-page">
+      Welcome to PDF Tools, a web application that allows you to conveniently,
+      efficiently, and most importantly, securely split and merge PDF files.
+    </p>
+
+    <h2 class="about-page" style="margin-top: 20px">Features:</h2>
+    <ul>
+      <li>Automatic deletion of all files for greater security</li>
+      <li>Split a single PDF into multiple smaller PDFs</li>
+      <li>Merge mutliple PDFs into a single PDF</li>
+      <li>Download the resulting PDFs</li>
+    </ul>
+
+    <p class="about-page" style="margin-top: 20px; margin-bottom: 20px">
+      More features will be added soon.
+    </p>
+    <p class="about-page" style="margin-top: 20px; margin-bottom: 20px">
+      Thank you for using PDF Tools!
+    </p>
+
+    <a href="{{ url_for('index') }}" class="about-page" style="margin-top: 20px"
+      >Back to homepage</a
+    >
+    <p class="small-text" style="margin-top: 40px">
+      This project was originally started for a 20Time assignment.
+    </p>
+    <p class="small-text" style="margin-top: 20px">
+      Created using Flask and PyPDF2.
+    </p>
+  </body>
+</html>
