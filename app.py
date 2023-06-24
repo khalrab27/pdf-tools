@@ -8,7 +8,7 @@ from flask import (
     send_from_directory,
 )
 from werkzeug.utils import secure_filename
-from PyPDF2 import PdfReader, PdfWriter
+from pypdf import PdfReader, PdfWriter
 
 if os.name == "nt":
     UPLOAD_FOLDER = f"{str(os.getcwd())}\\uploads"
@@ -111,7 +111,7 @@ def merge_pdf():
         output_path = os.path.join(app.config["DOWNLOAD_FOLDER"], "merged.pdf")
 
         # Merge the PDF files
-        for file_path in list(reversed(file_paths)):
+        for file_path in file_paths:
             pdf = PdfReader(file_path)
             for page_number in range(len(pdf.pages)):
                 output.add_page(pdf._get_page(page_number))
