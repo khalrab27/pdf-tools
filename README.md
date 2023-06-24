@@ -11,4 +11,4 @@
 More features will be added soon.
 
 *This project was originally started for a 20Time assignment*
-*Created using Flask and PyPDF2*
+*Created using Flask and pypdf*
