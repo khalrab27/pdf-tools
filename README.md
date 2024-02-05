@@ -1,6 +1,6 @@
 # PDF Tools
 
-### A web application that allows you to conveniently, efficiently, and most importantly, securely split and merge PDF files.
+### A web application that allows you to conveniently, efficiently, and securely split and merge PDF files.
 ## Features:
 - Automatic deletion of all uploaded files for greater security
 - Split a single PDF into multiple smaller PDFs
