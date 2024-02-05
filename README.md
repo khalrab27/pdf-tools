@@ -10,6 +10,6 @@
 
 More features will be added soon.
 
-*This project was originally started for a 20Time assignment*
+*This project was originally started for a school assignment*
 
 *Created using Flask and pypdf*
